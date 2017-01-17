@@ -1,3 +1,4 @@
+<div role="form">
 <%= form_for(@message) do |f| %>
 
   
@@ -24,17 +25,17 @@
   
 <% end %>
 
+<div class="form-group">
+<label for="exampleInputEmail1">名前:</label><br>
+            <%= f.text_field :name , :class =>"form-control", :placeholder => "名前を記入してください。" %>
+</div>
 
-  名前:
-  
-<%= f.text_field :name %>
-
-
-  内容:
-  
-<%= f.text_field :body %>
+<div class="form-group">
+    <label for="exampleInputEmail1">内容:</label><br>
+    <%= f.text_area :body , :class =>"form-control",:placeholder => "内容を記入してください。" %>
+</div>
 
   
 <%= f.submit class: "btn btn-sm btn-primary" %>
-
 <% end %>
+</div>
