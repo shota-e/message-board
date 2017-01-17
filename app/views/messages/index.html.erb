@@ -17,11 +17,11 @@
     <%= form_for(@message) do |f| %>
         <div class="form-group">
             <label for="exampleInputEmail1">名前:</label><br>
-            <%= f.text_field :name %>
+            <%= f.text_field :name , :class =>"form-control", :placeholder => "名前を記入してください。" %>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">内容:</label><br>
-            <%= f.text_area :body %>
+            <%= f.text_area :body , :class =>"form-control",:placeholder => "内容を記入してください。" %>
         </div>
         <%= f.submit class: "btn btn-sm btn-primary" %>
     <% end %>
